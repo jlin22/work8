@@ -7,6 +7,7 @@ int main(){
   int x = open("stuffs",O_RDONLY,0777);
   char y[100] = "";
   read(x,y,100);
+  close(x);
   struct stat st;
   stat("stuffs", &st);
   int size = st.st_size;
